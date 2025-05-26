@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Founder's Insight | Premium Newsletter for Entrepreneurs</title>
+    <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+    <script>tailwind.config={theme:{extend:{colors:{primary:'#3b82f6',secondary:'#10b981'},borderRadius:{'none':'0px','sm':'4px',DEFAULT:'8px','md':'12px','lg':'16px','xl':'20px','2xl':'24px','3xl':'32px','full':'9999px','button':'8px'}}}}</script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Inter:wght@300;400;500;600;700&family=Merriweather:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css">
+    <style>
+        :where([class^="ri-"])::before { content: "\f3c2"; }
+        body {
+            font-family: 'Inter', sans-serif;
+            color: #1f2937;
+        }
+        .article-title {
+            font-family: 'Merriweather', serif;
+        }
+        .hero-gradient {
+            background: linear-gradient(90deg, rgba(255,255,255,1) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%);
+        }
+        input[type="number"]::-webkit-inner-spin-button,
+        input[type="number"]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        .custom-checkbox {
+            position: relative;
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #d1d5db;
+            border-radius: 4px;
+            transition: all 0.2s ease;
+        }
+        .custom-checkbox.checked {
+            background-color: #3b82f6;
+            border-color: #3b82f6;
+        }
+        .custom-checkbox.checked::after {
+            content: "";
+            position: absolute;
+            top: 3px;
+            left: 7px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        .custom-switch {
+            position: relative;
+            display: inline-block;
+            width: 44px;
+            height: 24px;
+        }
+        .custom-switch-track {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #e5e7eb;
+            border-radius: 34px;
+            transition: 0.4s;
+        }
+        .custom-switch-thumb {
+            position: absolute;
+            height: 20px;
+            width: 20px;
+            left: 2px;
+            bottom: 2px;
+            background-color: white;
+            border-radius: 50%;
+            transition: 0.4s;
+        }
+        .custom-switch.active .custom-switch-track {
+            background-color: #3b82f6;
+        }
+        .custom-switch.active .custom-switch-thumb {
+            transform: translateX(20px);
+        }
+        .tab-button {
+            position: relative;
+        }
+        .tab-button.active::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #3b82f6;
+        }
+    </style>
+</head>
+<body class="bg-white">
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <div class="flex items-center">
+                <a href="#" class="text-2xl font-['Pacifico'] text-primary mr-8">logo</a>
+                <nav class="hidden md:flex space-x-6">
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Ideas</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Guides</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Reviews</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Case Studies</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Resources</a>
+                    <a href="#" class="text-gray-700 hover:text-primary font-medium">Tools</a>
+                </nav>
+            </div>
+            <div class="flex items-center space-x-4">
+                <button class="text-primary hover:text-primary/80 font-medium whitespace-nowrap">Sign In</button>
+                <button class="bg-primary text-white px-4 py-2 !rounded-button hover:bg-primary/90 font-medium whitespace-nowrap">Subscribe</button>
+                <button class="md:hidden w-10 h-10 flex items-center justify-center">
+                    <i class="ri-menu-line ri-lg"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://readdy.ai/api/search-image?query=A%20modern%2C%20minimalist%20workspace%20with%20a%20laptop%2C%20coffee%2C%20and%20notebook.%20The%20scene%20has%20soft%20natural%20lighting%20with%20a%20gradient%20from%20white%20to%20light%20blue.%20The%20image%20has%20a%20clean%2C%20professional%20aesthetic%20suitable%20for%20entrepreneurs%20and%20business%20founders.%20The%20left%20side%20of%20the%20image%20is%20predominantly%20white%20and%20gradually%20transitions%20to%20a%20more%20detailed%20workspace%20on%20the%20right.&width=1920&height=600&seq=hero1&orientation=landscape" alt="Hero Background" class="w-full h-full object-cover object-top">
+        </div>
+        <div class="relative z-10 hero-gradient h-full">
+            <div class="container mx-auto px-4 py-20">
+                <div class="w-full max-w-2xl">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <span class="bg-blue-100 text-primary px-2 py-1 rounded-full text-xs font-medium">FEATURED</span>
+                        <span class="text-gray-600 text-sm">8 min read</span>
+                        <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">PREMIUM</span>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold article-title mb-6 text-gray-900">The Future of Remote Work: Strategies for Founders in 2025</h1>
+                    <p class="text-lg text-gray-700 mb-8">Discover how successful founders are reimagining workplace dynamics and building resilient remote teams in the post-pandemic era.</p>
+                    <div class="flex items-center mb-8">
+                        <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20woman%20with%20short%20dark%20hair%20and%20glasses%2C%20wearing%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20confident%20and%20approachable&width=100&height=100&seq=author1&orientation=squarish" alt="Author" class="w-12 h-12 rounded-full object-cover mr-4">
+                        <div>
+                            <p class="font-medium">Dr. Rebecca Chen</p>
+                            <p class="text-sm text-gray-600">Organizational Psychologist & Founder</p>
+                        </div>
+                    </div>
+                    <button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 font-medium whitespace-nowrap">Read Full Article</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Content Tabs -->
+    <section class="py-12 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-wrap justify-center mb-12 border-b border-gray-200">
+                <button class="tab-button active px-4 py-2 mx-2 text-primary font-medium">All</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Ideas</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Guides</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Reviews</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Case Studies</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Resources</button>
+                <button class="tab-button px-4 py-2 mx-2 text-gray-600 hover:text-primary font-medium">Tools</button>
+            </div>
+
+            <!-- Content Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Article Card 1 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20modern%20office%20setup%20with%20digital%20marketing%20analytics%20dashboard%20on%20multiple%20screens.%20The%20scene%20shows%20data%20visualization%2C%20charts%2C%20and%20metrics%20with%20a%20clean%2C%20professional%20aesthetic.%20The%20image%20has%20good%20lighting%20and%20a%20contemporary%20workspace%20feel%2C%20ideal%20for%20a%20business%20article%20about%20digital%20marketing%20strategies.&width=600&height=400&seq=article1&orientation=landscape" alt="Digital Marketing" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-blue-100 text-primary px-2 py-1 rounded-full text-xs font-medium">GUIDE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">7 Digital Marketing Channels Every Startup Should Master in 2025</h3>
+                        <p class="text-gray-600 mb-4">Explore the most effective digital marketing strategies that are delivering exceptional ROI for early-stage startups with limited budgets.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20man%20with%20short%20brown%20hair%20wearing%20a%20blue%20button-up%20shirt%2C%20with%20a%20neutral%20background%2C%20looking%20confident%20and%20friendly&width=50&height=50&seq=author2&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">James Wilson</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>6 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 2 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20venture%20capital%20meeting%20with%20entrepreneurs.%20The%20image%20shows%20diverse%20business%20people%20discussing%20over%20documents%20and%20presentations%20in%20a%20modern%20conference%20room.%20There%20are%20financial%20charts%20visible%20and%20the%20atmosphere%20conveys%20serious%20business%20discussion%20about%20funding%20and%20investment.&width=600&height=400&seq=article2&orientation=landscape" alt="Venture Capital" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs font-medium">CASE STUDY</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">PREMIUM</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">How Quantum Health Secured $40M Series B During an Investment Drought</h3>
+                        <p class="text-gray-600 mb-4">An exclusive behind-the-scenes look at how this healthcare startup crafted a pitch that convinced skeptical VCs in a challenging market.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20woman%20with%20long%20blonde%20hair%20wearing%20professional%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20confident%20and%20approachable&width=50&height=50&seq=author3&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">Sarah Johnson</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>12 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 3 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20various%20project%20management%20software%20interfaces%20on%20multiple%20devices.%20The%20image%20shows%20organized%20kanban%20boards%2C%20gantt%20charts%2C%20and%20task%20management%20systems%20on%20laptop%2C%20tablet%20and%20smartphone%20screens.%20The%20workspace%20is%20clean%20and%20modern%20with%20good%20lighting%2C%20ideal%20for%20a%20software%20review%20article.&width=600&height=400&seq=article3&orientation=landscape" alt="Project Management Tools" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded-full text-xs font-medium">REVIEW</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">The Ultimate Comparison: 5 Project Management Tools for Growing Teams</h3>
+                        <p class="text-gray-600 mb-4">We tested the most popular project management platforms to determine which offers the best balance of features, usability, and value.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20man%20with%20black%20hair%20and%20glasses%20wearing%20a%20casual%20button-up%20shirt%2C%20with%20a%20neutral%20background%2C%20looking%20friendly%20and%20tech-savvy&width=50&height=50&seq=author4&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">David Kim</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>9 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 4 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20a%20diverse%20team%20collaborating%20in%20a%20modern%20office%20environment.%20The%20image%20shows%20people%20from%20different%20backgrounds%20working%20together%20on%20a%20business%20strategy%20with%20sticky%20notes%20on%20a%20glass%20wall%2C%20laptops%20open%2C%20and%20a%20positive%20collaborative%20atmosphere.%20The%20lighting%20is%20bright%20and%20the%20space%20looks%20contemporary%20and%20innovative.&width=600&height=400&seq=article4&orientation=landscape" alt="Team Building" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-blue-100 text-primary px-2 py-1 rounded-full text-xs font-medium">GUIDE</span>
+                        </div>
+                        <div class="absolute top-4 right-4">
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded-full text-xs font-medium">PREMIUM</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">Building High-Performance Teams: The First 10 Hires That Matter Most</h3>
+                        <p class="text-gray-600 mb-4">Learn which roles to prioritize during your startup's early growth phase and how to attract top talent without breaking the bank.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20man%20with%20salt%20and%20pepper%20hair%20wearing%20a%20professional%20suit%2C%20with%20a%20neutral%20background%2C%20looking%20experienced%20and%20trustworthy&width=50&height=50&seq=author5&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">Michael Thompson</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>11 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 5 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20financial%20documents%2C%20charts%2C%20and%20calculators%20on%20a%20desk.%20The%20image%20shows%20business%20planning%20materials%20including%20spreadsheets%20with%20financial%20projections%2C%20budget%20documents%2C%20and%20investment%20analysis.%20The%20workspace%20is%20organized%20and%20professional%20with%20good%20lighting%2C%20ideal%20for%20a%20financial%20planning%20article.&width=600&height=400&seq=article5&orientation=landscape" alt="Financial Planning" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded-full text-xs font-medium">RESOURCE</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">The Founder's Financial Toolkit: Essential Resources for Smart Money Management</h3>
+                        <p class="text-gray-600 mb-4">A curated collection of templates, calculators, and guides to help founders make informed financial decisions at every stage.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20woman%20with%20curly%20hair%20wearing%20professional%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20confident%20and%20knowledgeable&width=50&height=50&seq=author6&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">Olivia Martinez</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>8 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Article Card 6 -->
+                <div class="bg-white rounded shadow-sm overflow-hidden transition-transform hover:shadow-md hover:-translate-y-1">
+                    <div class="relative h-48">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20AI%20technology%20in%20business%20applications.%20The%20image%20shows%20artificial%20intelligence%20interfaces%2C%20machine%20learning%20visualizations%2C%20and%20data%20processing%20on%20computer%20screens%20in%20a%20modern%20office%20environment.%20The%20atmosphere%20conveys%20innovation%20and%20cutting-edge%20technology%20implementation%20for%20business%20solutions.&width=600&height=400&seq=article6&orientation=landscape" alt="AI Tools" class="w-full h-full object-cover object-top">
+                        <div class="absolute top-4 left-4">
+                            <span class="bg-indigo-100 text-indigo-800 px-2 py-1 rounded-full text-xs font-medium">TOOLS</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold article-title mb-3">10 AI Tools That Are Transforming How Startups Operate in 2025</h3>
+                        <p class="text-gray-600 mb-4">Discover the game-changing AI solutions that are helping resource-constrained startups compete with established industry players.</p>
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center">
+                                <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20man%20with%20short%20black%20hair%20wearing%20a%20casual%20tech%20company%20style%20shirt%2C%20with%20a%20neutral%20background%2C%20looking%20innovative%20and%20tech-focused&width=50&height=50&seq=author7&orientation=squarish" alt="Author" class="w-8 h-8 rounded-full object-cover mr-2">
+                                <span class="text-sm text-gray-700">Ryan Patel</span>
+                            </div>
+                            <div class="flex items-center text-sm text-gray-500">
+                                <i class="ri-time-line mr-1"></i>
+                                <span>7 min read</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-12">
+                <button class="border border-gray-300 text-gray-700 px-6 py-3 !rounded-button hover:bg-gray-50 font-medium whitespace-nowrap">Load More Articles</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscription Module -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Join Our Premium Community</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Get unlimited access to exclusive content, expert insights, and practical tools that will help you build and scale your business.</p>
+            </div>
+
+            <div class="max-w-4xl mx-auto bg-gray-50 rounded-lg shadow-sm overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <!-- Subscription Plans -->
+                    <div class="p-8 border-b md:border-b-0 md:border-r border-gray-200">
+                        <h3 class="text-xl font-bold mb-6">Choose Your Plan</h3>
+                        
+                        <div class="flex items-center justify-between mb-6">
+                            <span class="text-gray-700 font-medium">Billing Period</span>
+                            <div class="flex items-center">
+                                <span class="mr-2 text-sm">Monthly</span>
+                                <div class="custom-switch" id="billingSwitch">
+                                    <div class="custom-switch-track"></div>
+                                    <div class="custom-switch-thumb"></div>
+                                </div>
+                                <span class="ml-2 text-sm">Annual</span>
+                            </div>
+                        </div>
+                        
+                        <div class="space-y-4">
+                            <div class="border border-gray-200 rounded p-4 hover:border-primary cursor-pointer">
+                                <div class="flex items-start">
+                                    <div class="custom-checkbox" id="standardPlan"></div>
+                                    <div class="ml-3">
+                                        <div class="flex justify-between">
+                                            <h4 class="font-medium">Standard</h4>
+                                            <div>
+                                                <span class="font-bold">$12</span>
+                                                <span class="text-sm text-gray-500">/month</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">Full access to all articles and basic resources</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border-2 border-primary rounded p-4 bg-blue-50 cursor-pointer">
+                                <div class="flex items-start">
+                                    <div class="custom-checkbox checked" id="proPlan"></div>
+                                    <div class="ml-3">
+                                        <div class="flex justify-between">
+                                            <div>
+                                                <h4 class="font-medium">Pro</h4>
+                                                <span class="bg-primary text-white text-xs px-2 py-0.5 rounded-full">MOST POPULAR</span>
+                                            </div>
+                                            <div>
+                                                <span class="font-bold">$29</span>
+                                                <span class="text-sm text-gray-500">/month</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">Everything in Standard plus exclusive case studies and premium tools</p>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="border border-gray-200 rounded p-4 hover:border-primary cursor-pointer">
+                                <div class="flex items-start">
+                                    <div class="custom-checkbox" id="founderPlan"></div>
+                                    <div class="ml-3">
+                                        <div class="flex justify-between">
+                                            <h4 class="font-medium">Founder's Circle</h4>
+                                            <div>
+                                                <span class="font-bold">$49</span>
+                                                <span class="text-sm text-gray-500">/month</span>
+                                            </div>
+                                        </div>
+                                        <p class="text-sm text-gray-600 mt-1">All Pro benefits plus quarterly founder workshops and 1:1 expert sessions</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-6 text-sm text-gray-500">
+                            <p>✓ Cancel anytime</p>
+                            <p>✓ 14-day money-back guarantee</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Payment Form -->
+                    <div class="p-8">
+                        <h3 class="text-xl font-bold mb-6">Payment Details</h3>
+                        
+                        <form>
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="email">Email</label>
+                                <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" type="email" id="email" placeholder="your@email.com">
+                            </div>
+                            
+                            <div class="mb-4">
+                                <label class="block text-gray-700 text-sm font-medium mb-2" for="cardNumber">Card Number</label>
+                                <div class="relative">
+                                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" type="text" id="cardNumber" placeholder="1234 5678 9012 3456">
+                                    <div class="absolute right-3 top-1/2 transform -translate-y-1/2 flex space-x-1">
+                                        <i class="ri-visa-fill text-blue-800"></i>
+                                        <i class="ri-mastercard-fill text-orange-500"></i>
+                                        <i class="ri-paypal-fill text-blue-600"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="grid grid-cols-2 gap-4 mb-6">
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="expiry">Expiry Date</label>
+                                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" type="text" id="expiry" placeholder="MM/YY">
+                                </div>
+                                <div>
+                                    <label class="block text-gray-700 text-sm font-medium mb-2" for="cvc">CVC</label>
+                                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary" type="text" id="cvc" placeholder="123">
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full bg-primary text-white py-3 !rounded-button hover:bg-primary/90 font-medium whitespace-nowrap">Subscribe Now</button>
+                            
+                            <p class="text-center text-sm text-gray-500 mt-4">By subscribing, you agree to our <a href="#" class="text-primary hover:underline">Terms</a> and <a href="#" class="text-primary hover:underline">Privacy Policy</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="py-16 bg-gray-900 text-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-3xl mx-auto text-center">
+                <h2 class="text-3xl font-bold mb-4">Stay Ahead of the Curve</h2>
+                <p class="text-lg text-gray-300 mb-8">Join 50,000+ founders receiving our weekly insights on building and scaling successful businesses.</p>
+                
+                <form class="flex flex-col sm:flex-row gap-4 max-w-lg mx-auto">
+                    <input type="email" placeholder="Your email address" class="flex-grow px-4 py-3 rounded border-none focus:outline-none focus:ring-2 focus:ring-primary text-gray-900">
+                    <button type="submit" class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 font-medium whitespace-nowrap">Subscribe Free</button>
+                </form>
+                
+                <p class="text-sm text-gray-400 mt-4">No spam, ever. We'll never share your email address and you can opt out at any time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Contributors -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold mb-4">Meet Our Expert Contributors</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Learn from industry leaders who've built and scaled successful businesses across various sectors.</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Contributor 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20man%20with%20glasses%20and%20short%20gray%20hair%20wearing%20a%20business%20casual%20outfit%2C%20with%20a%20neutral%20background%2C%20looking%20experienced%20and%20knowledgeable&width=150&height=150&seq=contributor1&orientation=squarish" alt="Contributor" class="w-24 h-24 rounded-full object-cover mx-auto mb-4">
+                    <h3 class="font-bold text-lg">Daniel Morgan</h3>
+                    <p class="text-primary font-medium mb-2">Serial Entrepreneur & VC</p>
+                    <p class="text-sm text-gray-600 mb-4">Founded 3 tech startups with successful exits, now investing in early-stage B2B SaaS companies.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-global-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contributor 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20woman%20with%20long%20dark%20hair%20wearing%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20confident%20and%20professional&width=150&height=150&seq=contributor2&orientation=squarish" alt="Contributor" class="w-24 h-24 rounded-full object-cover mx-auto mb-4">
+                    <h3 class="font-bold text-lg">Sophia Rodriguez</h3>
+                    <p class="text-primary font-medium mb-2">Marketing Strategist</p>
+                    <p class="text-sm text-gray-600 mb-4">Former CMO at Fortune 500 tech company, specializing in go-to-market strategies for B2C products.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-global-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contributor 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20middle-aged%20man%20with%20beard%20wearing%20casual%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20creative%20and%20innovative&width=150&height=150&seq=contributor3&orientation=squarish" alt="Contributor" class="w-24 h-24 rounded-full object-cover mx-auto mb-4">
+                    <h3 class="font-bold text-lg">Alex Thompson</h3>
+                    <p class="text-primary font-medium mb-2">Product Design Expert</p>
+                    <p class="text-sm text-gray-600 mb-4">Led product teams at top tech companies, helping startups build user-centric products that scale.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-global-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Contributor 4 -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center">
+                    <img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20woman%20with%20short%20blonde%20hair%20wearing%20professional%20business%20attire%2C%20with%20a%20neutral%20background%2C%20looking%20analytical%20and%20finance-focused&width=150&height=150&seq=contributor4&orientation=squarish" alt="Contributor" class="w-24 h-24 rounded-full object-cover mx-auto mb-4">
+                    <h3 class="font-bold text-lg">Emma Chen</h3>
+                    <p class="text-primary font-medium mb-2">Financial Strategist</p>
+                    <p class="text-sm text-gray-600 mb-4">Venture partner specializing in financial modeling and fundraising strategies for early-stage startups.</p>
+                    <div class="flex justify-center space-x-3">
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-8 h-8 flex items-center justify-center text-gray-600 hover:text-primary">
+                            <i class="ri-global-line"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center text-primary font-medium hover:underline">
+                    View All Contributors
+                    <i class="ri-arrow-right-line ml-1"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Become a Contributor -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden">
+                <div class="grid md:grid-cols-2 gap-0">
+                    <div class="p-8">
+                        <h2 class="text-2xl font-bold mb-4">Share Your Expertise</h2>
+                        <p class="text-gray-600 mb-6">We're looking for experienced founders and industry experts to contribute valuable insights to our community.</p>
+                        
+                        <div class="space-y-4 mb-6">
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-3 mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Reach Our Audience</h3>
+                                    <p class="text-sm text-gray-600">Connect with 50,000+ founders and decision-makers in the startup ecosystem.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-3 mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Build Your Brand</h3>
+                                    <p class="text-sm text-gray-600">Establish yourself as a thought leader in your area of expertise.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start">
+                                <div class="w-8 h-8 flex items-center justify-center bg-blue-100 rounded-full text-primary mr-3 mt-0.5">
+                                    <i class="ri-check-line"></i>
+                                </div>
+                                <div>
+                                    <h3 class="font-medium">Get Compensated</h3>
+                                    <p class="text-sm text-gray-600">Earn competitive rates for your in-depth articles and case studies.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <button class="bg-primary text-white px-6 py-3 !rounded-button hover:bg-primary/90 font-medium whitespace-nowrap">Apply to Contribute</button>
+                    </div>
+                    
+                    <div class="relative h-full min-h-[300px] md:min-h-0">
+                        <img src="https://readdy.ai/api/search-image?query=A%20professional%20scene%20showing%20diverse%20entrepreneurs%20collaborating%20on%20content%20creation.%20The%20image%20shows%20people%20writing%2C%20discussing%20ideas%2C%20and%20working%20on%20laptops%20in%20a%20modern%20creative%20workspace.%20The%20atmosphere%20conveys%20knowledge%20sharing%20and%20professional%20content%20development%20with%20good%20lighting%20and%20a%20contemporary%20feel.&width=600&height=400&seq=contributor-cta&orientation=landscape" alt="Become a Contributor" class="absolute inset-0 w-full h-full object-cover object-top">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-16 pb-8">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+                <div>
+                    <a href="#" class="text-2xl font-['Pacifico'] text-white mb-4 inline-block">logo</a>
+                    <p class="text-gray-400 mb-6">The premier resource for founders and entrepreneurs building the next generation of successful businesses.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-twitter-x-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-linkedin-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-instagram-line"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 flex items-center justify-center bg-gray-800 rounded-full hover:bg-primary transition-colors">
+                            <i class="ri-youtube-line"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Content</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Ideas</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Guides</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Reviews</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Case Studies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Resources</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tools</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Company</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Our Team</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contributors</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Careers</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Subscribe</h3>
+                    <p class="text-gray-400 mb-4">Get our weekly newsletter delivered to your inbox.</p>
+                    <form>
+                        <div class="flex mb-2">
+                            <input type="email" placeholder="Your email" class="flex-grow px-4 py-2 rounded-l border-none focus:outline-none focus:ring-2 focus:ring-primary text-gray-900">
+                            <button type="submit" class="bg-primary text-white px-4 py-2 rounded-r hover:bg-primary/90 whitespace-nowrap">Subscribe</button>
+                        </div>
+                        <p class="text-xs text-gray-500">By subscribing you agree to our Privacy Policy</p>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-500 text-sm mb-4 md:mb-0">© 2025 Founder's Insight. All rights reserved.</p>
+                    <div class="flex space-x-6">
+                        <a href="#" class="text-gray-500 hover:text-white text-sm">Terms</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm">Privacy</a>
+                        <a href="#" class="text-gray-500 hover:text-white text-sm">Cookies</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script id="checkboxToggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const checkboxes = document.querySelectorAll('.custom-checkbox');
+            
+            checkboxes.forEach(checkbox => {
+                checkbox.addEventListener('click', function() {
+                    // Remove checked class from all checkboxes
+                    checkboxes.forEach(cb => cb.classList.remove('checked'));
+                    
+                    // Add checked class to clicked checkbox
+                    this.classList.add('checked');
+                });
+            });
+        });
+    </script>
+
+    <script id="switchToggle">
+        document.addEventListener('DOMContentLoaded', function() {
+            const billingSwitch = document.getElementById('billingSwitch');
+            
+            billingSwitch.addEventListener('click', function() {
+                this.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <script id="tabNavigation">
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
